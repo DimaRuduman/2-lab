@@ -1,27 +1,44 @@
 'use strict';
 
-/* Call function from function in loop
-- Implement function `average` with signature
-  `average(a: number, b: number): number`
-  calculating average (arithmetic mean).
-- Implement function `square` with signature
-  `square(x: number): number` calculating square of x.
-- Implement function `cube` with signature
-  `cube(x: number): number` calculating cube of x.
-- Call `square` and `cube` in loop 0 to 9, pass results
-  to function `average` on each iteration.
-  Add calculation results to array and return this array
-  from function `calculate`.
+function average (a, b){
+  let res = (a + b) / 2
+  //console.log (res)
+  return res;
+}
 
-Call functions `square` and `cube` in loop, then pass their
-results to function `average`. Print what `average` returns. */
+average (5, 2)
 
-const square = null;
 
-const cube = null;
+function square (x){
+  let resSquare = (x * x);
+  //console.log (resSquare)
+  return resSquare; 
+} 
+square (5)
 
-const average = null;
 
-const calculate = null;
+function cube (x){
+  let resCube = (x ** 3)
+  //console.log (resCube)
+  return resCube;
+}
 
+cube (3)
+
+function calculate(){
+  let results = [];
+
+for (let i = 0; i < 10; i++){
+  let numbsSquare = square(i);
+  let numbsCube = cube(i);   
+  let numbsAverage = average (numbsSquare, numbsCube);
+  
+  results.push (numbsAverage); 
+}
+
+console.log (results)
+return results;
+}
+
+calculate (4)
 module.exports = { square, cube, average, calculate };
