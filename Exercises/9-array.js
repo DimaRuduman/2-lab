@@ -8,7 +8,7 @@ const phonebook = [
 ]
 const findPhoneByName=(name)=>{
 for (const user of phonebook)
-if(user[i].name === name) 
+if(user.name === name) 
 return user.phone}
 
 module.exports = { phonebook, findPhoneByName };

@@ -8,8 +8,9 @@ const phonebook = {
 };
 
 
-const findPhoneByName=name=>phonebook[name];
+const findPhoneByName=name=>phonebook[name]
 
+console.log(findPhoneByName('Dima Ruduman'));
 module.exports = { phonebook, findPhoneByName };
 
 
